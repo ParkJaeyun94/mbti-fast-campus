@@ -9,7 +9,7 @@
 
   <!-- 퀴즈 페이지 -->
   <main v-else>
-
+    <Question />
   </main>
 </template>
 

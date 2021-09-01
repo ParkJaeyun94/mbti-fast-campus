@@ -1,5 +1,5 @@
 <template>
-  <a @click.prevent="clickEvent">{{text}}</a>
+  <a :class="[styleType]" @click.prevent="clickEvent">{{text}}</a>
 </template>
 
 <script>
@@ -11,12 +11,12 @@ export default {
     text: {
       type: String,
       default: ""
+    },
+    styleType:{
+      type: String,
+      default: "pink"
     }
-  },
-  methods: {
-
   }
-
 }
 </script>
 
@@ -60,6 +60,18 @@ a {
   &:hover {
     background: #ffe9e9;
     transform: translateY(0.25em);
+  }
+
+  &.blue{
+    display: block;
+    margin-bottom: 29px;
+    background: #fefefe;
+    padding: 1.8em;
+    border-color: #8599b1;
+    &::before{
+      box-shadow: 0 0 0 2px #8599b1, 0 0.625em 0 0 #e2efff;
+      background: #c4d8f9;
+    }
   }
 }
 </style>
